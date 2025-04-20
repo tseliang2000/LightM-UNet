@@ -91,6 +91,7 @@ nnUNetv2_train DATASET_ID 2d all -tr nnUNetTrainerLightMUNet
 
 ```bash
 nnUNetv2_train DATASET_ID 3d_fullres all -tr nnUNetTrainerLightMUNet
+MKL_THREADING_LAYER=GNU nnUNetv2_predict -i input_folder -o output_folder -d 801 -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
 ```
 
 
