@@ -111,7 +111,7 @@ nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c 2d -tr nnUNet
 
 ```bash
 nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
-MKL_THREADING_LAYER=GNU nnUNetv2_predict -i input_folder -o output_folder -d 801 -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
+MKL_THREADING_LAYER=GNU nnUNetv2_predict -i /home/tse/Documents/Thesis/LightM-UNet-master/data/input_folder -o /home/tse/Documents/Thesis/LightM-UNet-master/data/output_folder -d 801 -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
 ```
 
 
