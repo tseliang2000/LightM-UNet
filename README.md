@@ -113,7 +113,14 @@ nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c 2d -tr nnUNet
 nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
 MKL_THREADING_LAYER=GNU nnUNetv2_predict -i /home/tse/Documents/Thesis/LightM-UNet-master/data/input_folder -o /home/tse/Documents/Thesis/LightM-UNet-master/data/output_folder -d 801 -c 3d_fullres -tr nnUNetTrainerLightMUNet --disable_tta
 ```
-
+### Evaluate:
+```bash
+nnUNetv2_evaluate_folder \
+/home/tse/Documents/Thesis/LightM-UNet-master/data/nnUNet_preprocessed/gt_segmentations_24 \
+/home/tse/Documents/Thesis/LightM-UNet-master/data/output_folder \
+-djfile /home/tse/Documents/Thesis/LightM-UNet-master/data/nnUNet_results/Dataset801_LiverCT/nnUNetTrainerLightMUNet__nnUNetPlans__3d_fullres/dataset.json \
+-pfile /home/tse/Documents/Thesis/LightM-UNet-master/data/nnUNet_results/Dataset801_LiverCT/nnUNetTrainerLightMUNet__nnUNetPlans__3d_fullres/plans.json -o /home/tse/Documents/Thesis/LightM-UNet-master/data/eval_lightmunet_dice.json
+```
 
 ## Citation
 If you find our work helpful, please consider citing the following papers
